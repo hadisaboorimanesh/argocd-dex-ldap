@@ -1,6 +1,6 @@
 configs:
   cm:
-    url: https://argocd.hasti.co
+    url: https://argocd.company.co
     dex.config: |
       logger:
         level: debug
@@ -9,13 +9,13 @@ configs:
           id: my-ldap
           name: LDAP
           config:
-            host: "GIG-DC1-G004.gig.holdings:636"
+            host: "gi.hold:636"
             insecureSkipVerify: true
-            bindDN: CN=Moradi\, Saeed (HIT),OU=HIT-Users,OU=HIT,OU=GIG-Holdings,DC=gig,DC=holdings
-            bindPW: S@eed1295959595
+            bindDN: CN=NNNNN\, MMMM (HIT),OU=HIT-Users,OU=HIT,OU=GIG-Hold,DC=gi,DC=hold
+            bindPW: *********
             usernamePrompt: Username
             userSearch:
-              baseDN: "OU=HIT-Users,OU=HIT,OU=GIG-Holdings,DC=gig,DC=holdings"
+              baseDN: "OU=HIT-Users,OU=HIT,OU=GIG-Holdings,DC=gi,DC=hold"
               filter: "(objectClass=top)"
               username: sAMAccountName
               idAttr: sAMAccountName
@@ -23,7 +23,7 @@ configs:
               nameAttr: name
                 #preferredUsernameAttr: uid
             groupSearch:
-              baseDN: "OU=HIT-Users,OU=HIT,OU=GIG-Holdings,DC=gig,DC=holdings"
+              baseDN: "OU=HIT-Users,OU=HIT,OU=GIG-Holdings,DC=gi,DC=hold"
               filter: "(objectClass=top)"
               userMatchers:
               - userAttr: sAMAccountName
